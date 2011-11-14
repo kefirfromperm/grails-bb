@@ -1,0 +1,17 @@
+<plugin name='bb' version='0.4' grailsVersion='1.1.2 &gt; *'>
+  <author>Vitaliy Samolovskih aka Kefir</author>
+  <authorEmail>kefir@perm.ru</authorEmail>
+  <title>Support bb codes with KefirBB</title>
+  <description>\
+It's support text processors with KefirBB.
+</description>
+  <documentation>http://kefir-bb.sourceforge.net</documentation>
+  <resources>
+    <resource>DataSource</resource>
+    <resource>UrlMappings</resource>
+    <resource>grails.plugin.bb.BbService</resource>
+    <resource>grails.plugin.bb.BbTagLib</resource>
+  </resources>
+  <dependencies />
+  <behavior />
+</plugin>
