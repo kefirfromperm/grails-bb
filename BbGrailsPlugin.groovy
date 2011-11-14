@@ -12,7 +12,6 @@ class BbGrailsPlugin {
             "grails-app/conf/UrlMappings.groovy"
     ]
 
-    // TODO Fill in these fields
     def author = "Vitaliy Samolovskih aka Kefir"
     def authorEmail = "kefir@perm.ru"
     def title = "Support bb codes with KefirBB"
