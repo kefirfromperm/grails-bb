@@ -1,44 +1,28 @@
 package grails.plugin.bb
 
-import grails.test.*
-import grails.plugin.bb.BbService
-import grails.plugin.bb.BbTagLib
+import grails.test.mixin.TestFor
+import org.junit.Before
 
-class BbTagLibTests extends TagLibUnitTestCase {
-    StringWriter out;
-    BbTagLib tl;
-
-    protected void setUp() {
-        super.setUp();
-        out = new StringWriter();
-        BbTagLib.metaClass.out = out;
-        tl = new BbTagLib();
-        tl.bbService = new BbService();
-    }
-
-    protected void tearDown() {
-        super.tearDown();
-        def remove = GroovySystem.metaClassRegistry.&removeMetaClass;
-        remove BbTagLib;
+@TestFor(BbTagLib)
+class BbTagLibTests {
+    @Before
+    public void prepareTagLib(){
+        tagLib.bbService = new BbService();
     }
 
     void testDefaultConfiguration() {
-        tl.process([text: 'test'], null);
-        assertEquals("Default configuration!", out.toString());
+        assertEquals("Default configuration!", applyTemplate('<bb:process text="test"/>'));
     }
 
     void testBody() {
-        tl.process([:], {return "test";});
-        assertEquals("Default configuration!", out.toString());
+        assertEquals("Default configuration!", applyTemplate('<bb:process>test</bb:process>'));
     }
 
     void testSpecialConfiguration() {
-        tl.process([conf: 'spec', text: 'test'], null);
-        assertEquals("Special configuration!", out.toString());
+        assertEquals("Special configuration!", applyTemplate('<bb:process conf="spec" text="test"/>'));
     }
 
     void testEscapeXml(){
-        tl.xml([text:'&'], null);
-        assertEquals("&amp;", out.toString());
+        assertEquals("&amp;", applyTemplate('<bb:xml text="&"/>'));
     }
 }

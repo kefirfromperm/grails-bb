@@ -1,29 +1,18 @@
 package grails.plugin.bb
 
-import grails.test.*
-import grails.plugin.bb.BbService
+import grails.test.mixin.TestFor
 
-class BbServiceTests extends GrailsUnitTestCase {
-    BbService bbService;
-
-    protected void setUp() {
-        super.setUp()
-        bbService = new BbService();
-    }
-
-    protected void tearDown() {
-        super.tearDown()
-    }
-
+@TestFor(BbService)
+class BbServiceTests {
     void testDefaultConfiguration() {
-        assertEquals("Default configuration!", bbService.process("test"))
+        assertEquals("Default configuration!", service.process("test"))
     }
 
     void testSpecialConfiguration() {
-        assertEquals("Special configuration!", bbService.process("spec", "test"))
+        assertEquals("Special configuration!", service.process("spec", "test"))
     }
 
     void testEscapeXml(){
-        assertEquals("&amp;", bbService.escapeXml("&"));
+        assertEquals("&amp;", service.escapeXml("&"));
     }
 }

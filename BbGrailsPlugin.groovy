@@ -9,7 +9,8 @@ class BbGrailsPlugin {
             "grails-app/conf/kefirbb.xml",
             "grails-app/conf/spec.xml",
             "grails-app/conf/DataSource.groovy",
-            "grails-app/conf/UrlMappings.groovy"
+            "grails-app/conf/UrlMappings.groovy",
+            "web-app"
     ]
 
     def author = "Vitaliy Samolovskih aka Kefir"
