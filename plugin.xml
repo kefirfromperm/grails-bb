@@ -1,17 +1,26 @@
-<plugin name='bb' version='0.4' grailsVersion='1.1.2 &gt; *'>
+<plugin name='bb' version='1.0-SNAPSHOT' grailsVersion='2.0.0 &gt; *'>
   <author>Vitaliy Samolovskih aka Kefir</author>
   <authorEmail>kefir@perm.ru</authorEmail>
   <title>Support bb codes with KefirBB</title>
   <description>\
-It's support text processors with KefirBB.
+It supports text processing with KefirBB.
 </description>
-  <documentation>http://kefir-bb.sourceforge.net</documentation>
+  <documentation>http://kefirsf.org/kefirbb/</documentation>
+  <type>BbGrailsPlugin</type>
   <resources>
-    <resource>DataSource</resource>
-    <resource>UrlMappings</resource>
     <resource>grails.plugin.bb.BbService</resource>
     <resource>grails.plugin.bb.BbTagLib</resource>
   </resources>
-  <dependencies />
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies>
+    <compile>
+      <dependency group='org.kefirsf' name='kefirbb' version='1.0' />
+    </compile>
+  </dependencies>
+  <plugins />
+  <runtimePluginRequirements />
   <behavior />
 </plugin>

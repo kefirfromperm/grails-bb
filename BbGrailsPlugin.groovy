@@ -13,13 +13,17 @@ class BbGrailsPlugin {
             "web-app"
     ]
 
-    def author = "Vitaliy Samolovskih aka Kefir"
+    def author = "Vitalii Samolovskikh aka Kefir"
     def authorEmail = "kefir@perm.ru"
-    def title = "Support bb codes with KefirBB"
+    def title = "Grails BB-Codes plugin"
     def description = '''\\
-It supports text processing with KefirBB.
+The plugin supports text processing with KefirBB. KefirBB allows create flexible configuration for different
+text translation. For example, BB-to-HTML or HTML filtration.
 '''
 
     // URL to the plugin's documentation
     def documentation = "http://kefirsf.org/kefirbb/"
+    String license = 'APACHE'
+    def issueManagement = [system: 'github', url: 'https://github.com/kefirfromperm/grails-bb/issues']
+    def scm = [url: 'https://github.com/kefirfromperm/grails-bb']
 }
