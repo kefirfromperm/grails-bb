@@ -42,4 +42,4 @@
 # other
 *.iws
 *.iml
-
+/plugin.xml
