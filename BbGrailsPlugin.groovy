@@ -1,8 +1,8 @@
 class BbGrailsPlugin {
     // the plugin version
-    def version = "0.4"
+    def version = "1.0-SNAPSHOT"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.1.2 > *"
+    def grailsVersion = "2.0.0 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
             "grails-app/views/error.gsp",
@@ -16,9 +16,9 @@ class BbGrailsPlugin {
     def authorEmail = "kefir@perm.ru"
     def title = "Support bb codes with KefirBB"
     def description = '''\\
-It's support text processors with KefirBB.
+It supports text processing with KefirBB.
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://kefir-bb.sourceforge.net"
+    def documentation = "http://kefirsf.org/kefirbb/"
 }

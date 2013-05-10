@@ -1,7 +1,5 @@
 package grails.plugin.bb
 
-import grails.plugin.bb.BbService
-
 class BbTagLib {
     BbService bbService;
     static namespace = "bb";

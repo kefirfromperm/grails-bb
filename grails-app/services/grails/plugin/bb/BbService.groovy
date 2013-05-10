@@ -1,8 +1,9 @@
 package grails.plugin.bb
 
-import ru.perm.kefir.bbcode.BBProcessorFactory
-import ru.perm.kefir.bbcode.TextProcessor
-import ru.perm.kefir.bbcode.EscapeXmlProcessorFactory
+import org.kefirsf.bb.BBProcessorFactory
+import org.kefirsf.bb.EscapeXmlProcessorFactory
+import org.kefirsf.bb.TextProcessor
+
 import java.util.concurrent.ConcurrentHashMap
 
 class BbService {
