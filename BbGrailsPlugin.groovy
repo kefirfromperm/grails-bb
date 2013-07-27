@@ -16,10 +16,9 @@ class BbGrailsPlugin {
     def author = "Vitalii Samolovskikh aka Kefir"
     def authorEmail = "kefir@perm.ru"
     def title = "Grails BB-Codes plugin"
-    def description = '''\\
-The plugin supports text processing with KefirBB. KefirBB allows to create flexible configurations for different
-text translations. For example, BB-to-HTML or HTML filtration.
-'''
+    def description = '''The plugin supports text processing with the KefirBB library.
+The KefirBB allows to create flexible configurations for different text translations.
+For example, BB-to-HTML or HTML filtration.'''
 
     // URL to the plugin's documentation
     def documentation = "http://kefirsf.org/kefirbb/"
