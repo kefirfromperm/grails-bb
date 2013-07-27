@@ -12,7 +12,11 @@ class BbServiceTests {
         assertEquals("Special configuration!", service.process("spec", "test"))
     }
 
-    void testEscapeXml(){
+    void testEscapeXml() {
         assertEquals("&amp;", service.escapeXml("&"));
+    }
+
+    void testSafeHtml() {
+        assertEquals("<b>test</b>", service.safeHtml("<b onclick=\"...\">test</b>"));
     }
 }

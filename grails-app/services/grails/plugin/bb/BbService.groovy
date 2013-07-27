@@ -20,6 +20,7 @@ class BbService {
     private final TextProcessor defaultProcessor;
     private final Map<String, TextProcessor> processors;
     private final TextProcessor escapeXmlProcessor;
+    private final TextProcessor safeHtmlProcessor;
 
     /**
      * Construct the service
@@ -27,6 +28,7 @@ class BbService {
     def BbService() {
         factory = BBProcessorFactory.getInstance();
         defaultProcessor = factory.create();
+        safeHtmlProcessor = factory.createFromResource("org/kefirsf/bb/safehtml.xml")
         escapeXmlProcessor = EscapeXmlProcessorFactory.getInstance().create();
         processors = new ConcurrentHashMap<String, TextProcessor>();
     }
@@ -56,5 +58,12 @@ class BbService {
      */
     CharSequence escapeXml(CharSequence src) {
         return escapeXmlProcessor.process(src);
+    }
+
+    /**
+     * Process HTML to safe HTML. Without JS and styles.
+     */
+    CharSequence safeHtml(CharSequence src) {
+        return safeHtmlProcessor.process(src)
     }
 }

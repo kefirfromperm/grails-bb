@@ -22,10 +22,17 @@ class BbTagLib {
         }
     }
 
+    def html = {attrs, body ->
+        String text = extractText(attrs, body)
+        if(text !=null) {
+            out << bbService.safeHtml(text)
+        }
+    }
+
     /**
      * Extract text from attribute or body
      */
-    private String extractText(attrs, body) {
+    private static String extractText(attrs, body) {
         String text = attrs?.text;
         if (text == null) {
             text = body()?.toString();

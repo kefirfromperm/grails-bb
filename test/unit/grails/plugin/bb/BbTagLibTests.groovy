@@ -25,4 +25,8 @@ class BbTagLibTests {
     void testEscapeXml(){
         assertEquals("&amp;", applyTemplate('<bb:xml text="&"/>'));
     }
+
+    void testSafeHtml() {
+        assertEquals("<b>test</b>", applyTemplate('<bb:html><b onclick="...">test</b></bb:html>'));
+    }
 }
