@@ -1,6 +1,6 @@
 class BbGrailsPlugin {
     // the plugin version
-    def version = "1.0-SNAPSHOT"
+    def version = "1.0"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.0.0 > *"
     // resources that are excluded from plugin packaging
@@ -17,8 +17,8 @@ class BbGrailsPlugin {
     def authorEmail = "kefir@perm.ru"
     def title = "Grails BB-Codes plugin"
     def description = '''\\
-The plugin supports text processing with KefirBB. KefirBB allows create flexible configuration for different
-text translation. For example, BB-to-HTML or HTML filtration.
+The plugin supports text processing with KefirBB. KefirBB allows to create flexible configurations for different
+text translations. For example, BB-to-HTML or HTML filtration.
 '''
 
     // URL to the plugin's documentation
