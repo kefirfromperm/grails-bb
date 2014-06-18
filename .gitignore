@@ -43,3 +43,5 @@
 *.iws
 *.iml
 /plugin.xml
+/grails-app/conf/UrlMappings.groovy
+/grails-app/i18n/*
